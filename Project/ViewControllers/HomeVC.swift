@@ -55,10 +55,11 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        pushVC(storyboard: .Home, id: BookSessionVC.id)
+        
 //        switch indexPath.row {
 //        case 0 : pushVC(storyboard: .Home, id: TabbarVC.id)
-//        case 1 : goBack()
+//        case 1 : pushVC(storyboard: .Home, id: TabbarVC.id)
 //        case 2 : pushVC(storyboard: .Home, id: TabbarVC.id)
 //        case 3 : pushVC(storyboard: .Home, id: TabbarVC.id)
 //        default:
@@ -86,21 +87,23 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
-        switch indexPath.row {
-        case 0 : pushVC(storyboard: .Home, id: TabbarVC.id)
-            tblVw.reloadData()
-            menuContianerVw.isHidden = true
-        case 1 : pushVC(storyboard: .Home, id: TabbarVC.id)
-            tblVw.reloadData()
-            menuContianerVw.isHidden = true
-        case 2 : pushVC(storyboard: .Home, id: TabbarVC.id)
-            tblVw.reloadData()
-            menuContianerVw.isHidden = true
-        case 3 : pushVC(storyboard: .Home, id: TabbarVC.id)
-            tblVw.reloadData()
-            menuContianerVw.isHidden = true
-        default:
-            break
-        }
+        pushVC(storyboard: .Home, id: BookSessionVC.id)
+        
+//        switch indexPath.row {
+//        case 0 : pushVC(storyboard: .Home, id: TabbarVC.id)
+//            tblVw.reloadData()
+//            menuContianerVw.isHidden = true
+//        case 1 : pushVC(storyboard: .Home, id: TabbarVC.id)
+//            tblVw.reloadData()
+//            menuContianerVw.isHidden = true
+//        case 2 : pushVC(storyboard: .Home, id: TabbarVC.id)
+//            tblVw.reloadData()
+//            menuContianerVw.isHidden = true
+//        case 3 : pushVC(storyboard: .Home, id: TabbarVC.id)
+//            tblVw.reloadData()
+//            menuContianerVw.isHidden = true
+//        default:
+//            break
+//        }
     }
 }

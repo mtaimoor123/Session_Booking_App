@@ -81,21 +81,36 @@ class PasswordVC: BaseClass {
             DispatchQueue.main.async {
                 self.hideActivityIndicator()
                 if APIResponseUtil.isValidResponse(viewController: self, response: response, error: error) {
-                    self.showAlert(title: AlertConstants.Success, message: "Registration successful. Please verify your emial") {
-                        
+                    if let error = error {
+                        self.showAlert(message: error.localizedDescription)
+                    } else {
+                        self.showAlert(title: AlertConstants.Success, message: "Registration successful. Please verify your emial") {
+                            
+                            if let navController = self.navigationController {
+                                for viewController in navController.viewControllers {
+                                    if viewController is LoginVC {
+                                        navController.popToViewController(viewController, animated: true)
+                                        return
+                                    }
+                                }
+                                
+                                navController.popToRootViewController(animated: true)
+                            }
+                        }
+                    } 
+                } else {
+                    self.showAlert(title: AlertConstants.Failure, message: "Registration failed. Please try again.") {
                         if let navController = self.navigationController {
                             for viewController in navController.viewControllers {
-                                if viewController is LoginVC {
+                                if viewController is NameVC {
                                     navController.popToViewController(viewController, animated: true)
                                     return
                                 }
                             }
-                        
+                            
                             navController.popToRootViewController(animated: true)
                         }
                     }
-                } else {
-                    self.showAlert(message: "Registration failed. Please try again.")
                 }
             }
         }

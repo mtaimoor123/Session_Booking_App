@@ -32,6 +32,7 @@ class DataManager {
         return UserDefaults.standard.value(forKey: Constants.authToken) as? String
     }
     
+    
     // Save access token to UserDefaults
     func saveAccessToken(token: String) {
         UserDefaults.standard.setValue(token, forKey: Constants.authToken)

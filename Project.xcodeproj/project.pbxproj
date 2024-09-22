@@ -29,6 +29,7 @@
 		E1C74C7B2C542798006EDECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1C74C7A2C542798006EDECE /* Assets.xcassets */; };
 		E1C74C7E2C542798006EDECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C74C7C2C542798006EDECE /* LaunchScreen.storyboard */; };
 		E1C74C862C5429F0006EDECE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C74C852C5429F0006EDECE /* Extension.swift */; };
+		E1E322282CA05A6E00018E81 /* BookSessionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E322272CA05A6E00018E81 /* BookSessionVC.swift */; };
 		E1F7AC642C55042C0034C395 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F7AC632C55042C0034C395 /* Home.storyboard */; };
 		E1F7AC662C55043A0034C395 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F7AC652C55043A0034C395 /* HomeVC.swift */; };
 		E1F7AC6A2C5504570034C395 /* HomeColVwCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F7AC682C5504570034C395 /* HomeColVwCell.xib */; };
@@ -63,6 +64,7 @@
 		E1C74C7D2C542798006EDECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1C74C7F2C542798006EDECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1C74C852C5429F0006EDECE /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E1E322272CA05A6E00018E81 /* BookSessionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSessionVC.swift; sourceTree = "<group>"; };
 		E1F7AC632C55042C0034C395 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E1F7AC652C55043A0034C395 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		E1F7AC682C5504570034C395 /* HomeColVwCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeColVwCell.xib; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				E176CEC52C65FA4800E02767 /* AuthVCs */,
 				E1F7AC652C55043A0034C395 /* HomeVC.swift */,
 				E19B68E62C5548D6008DEAF9 /* TabbarVC.swift */,
+				E1E322272CA05A6E00018E81 /* BookSessionVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				E1ABE71B2C67F5D3003F2209 /* EmailValidator.swift in Sources */,
 				D988098D2C6EBDFC00BDE33B /* Data Manager.swift in Sources */,
 				E1F7AC662C55043A0034C395 /* HomeVC.swift in Sources */,
+				E1E322282CA05A6E00018E81 /* BookSessionVC.swift in Sources */,
 				E19B68E72C5548D6008DEAF9 /* TabbarVC.swift in Sources */,
 				E1F7AC6B2C5504570034C395 /* HomeColVwCell.swift in Sources */,
 				E16A254B2C54695C0049D068 /* BaseClass.swift in Sources */,

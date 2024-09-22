@@ -27,6 +27,8 @@ internal struct APIPaths {
     static let verifyEmail = APIConstants.BasePath + "user/verifyEmail"
     
     static let generateOTP = APIConstants.BasePath + "user/genrateOtp"
+    
+    static let bookSession = APIConstants.BasePath + "session/booking/class"
 }
 
 

@@ -22,8 +22,8 @@ class LoginVC: BaseClass {
         passwordTF.setLeftPaddingPoints(20)
         rememberMeBtnOutlet.setImage(UIImage(systemName: "circle"), for: .normal)
         
-        emailTF.text = "test12345"
-        passwordTF.text = "12345678"
+        emailTF.text = "cyber truck"
+        passwordTF.text = "11223344"
         
     }
     
@@ -49,36 +49,26 @@ class LoginVC: BaseClass {
         APIRequestUtil.shared.loginStudent(parameters: ["username": username, "password": password]) { response, error in
             self.hideActivityIndicator()
             
+            // Handle any error that occurs during the API call
             if let error = error {
-                self.showAlert(title: "Error", message:"\( error.localizedDescription) ->new error")
+                self.showAlert(title: "Error", message: "\(error.localizedDescription) ->new error")
                 return
             }
             
-            if let response = response, let success = response["success"] as? Int {
+            // Ensure that we received a response from the server
+            if let response = response {
                 
-                if success == 0, let message = response["message"] as? String {
-                    // If the account is not verified, run a specific method
-                    if message == "Account not verified" {
-                        self.handleUnverifiedAccount(userName: username) // Call your custom method here
-                    } else {
-                        self.showAlert(title: "Error", message: message)
-                    }
-                } else if success == 1 {
-                    // Success case, proceed with decoding the student
-                    if let student: Student = Student.fromDictionary(response) {
-                        print("Student decoded successfully: \(student)")
-                        let vc = self.getRef(storyboard: .Main, identifier: HomeVC.id) as! HomeVC
-                        self.pushTo(vc)
-                    } else {
-                        print("Failed to decode Student.")
-                        self.showAlert(title: "Error", message: "Unable to login. Please try again.")
-                    }
+                if let token = response["token"] as? String {
+                    DataManager.shared.saveAccessToken(token: token)
+                    print("token Saved Successfully" , token)
+                    let vc = self.getRef(storyboard: .Home, identifier: HomeVC.id) as! HomeVC
+                    self.pushTo(vc)
+                } else if let message = response["message"] as? String, message == "Account not verified" {
+                    self.handleUnverifiedAccount(userName: username)
                 } else {
-                    // Handle any other case, like unknown error
-                    self.showAlert(title: "Error", message: "An unknown error occurred. Please try again.")
+                    self.showAlert(title: "Error", message: "No token received or unknown response. Please try again.")
                 }
             } else {
-                //show alert for invalid response
                 self.showAlert(title: "Error", message: "Invalid response from server.")
             }
         }
@@ -95,7 +85,7 @@ class LoginVC: BaseClass {
     
     @IBAction func forgetPressed(_ sender: Any) {
         print(#function)
-        pushVC(storyboard: .Home, id: HomeVC.id)
+        pushVC(id: ForgetPasswordVC.id)
     }
     
     @IBAction func registerNowVC(_ sender: Any) {

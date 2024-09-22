@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -120,13 +120,13 @@
                                                     <constraint firstAttribute="height" constant="50" id="exa-wX-2kT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qjp-DQ-YVW">
                                                 <rect key="frame" x="10" y="100" width="245" height="447"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="separatorColor" name="AccentColor"/>
+                                                <color key="separatorColor" systemColor="groupTableViewBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SideMenuTblCell" id="jhF-Hw-F68" customClass="SideMenuTblCell" customModule="Project" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="50" width="245" height="55.5"/>
@@ -192,7 +192,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <constraints>
                                             <constraint firstItem="ngR-si-axc" firstAttribute="top" secondItem="NOb-Nh-L4K" secondAttribute="top" constant="5" id="1UC-Gr-O2r"/>
                                             <constraint firstItem="Qjp-DQ-YVW" firstAttribute="leading" secondItem="NOb-Nh-L4K" secondAttribute="leading" constant="10" id="5Bz-AT-Jfr"/>
@@ -319,7 +319,7 @@ Development In Progress</string>
         <!--New Booking-->
         <scene sceneID="KSw-g9-cYi">
             <objects>
-                <viewController id="7Yu-WP-mbE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookSessionVC" id="7Yu-WP-mbE" customClass="BookSessionVC" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WRx-hV-VyW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1155"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,7 +328,7 @@ Development In Progress</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="1086"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWG-pB-GMj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1004"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1085"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Booking Session" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYV-gs-KGY">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -339,20 +339,20 @@ Development In Progress</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="1NJ-3s-CKU">
-                                                <rect key="frame" x="20" y="70" width="335" height="914"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1NJ-3s-CKU">
+                                                <rect key="frame" x="20" y="70" width="335" height="995"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGH-Dt-s5d">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="90.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-lC-BSq">
-                                                                <rect key="frame" x="0.0" y="5" width="285" height="30.5"/>
+                                                                <rect key="frame" x="0.0" y="5" width="285" height="14.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   22-03-2034" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bq-AS-lV1">
-                                                                <rect key="frame" x="0.0" y="40.5" width="335" height="50"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="22-03-2034" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bq-AS-lV1">
+                                                                <rect key="frame" x="0.0" y="24.5" width="335" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="Gca-f7-76u"/>
                                                                 </constraints>
@@ -370,7 +370,7 @@ Development In Progress</string>
                                                                         <color key="value" name="AccentColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                                        <color key="value" systemColor="systemGray6Color"/>
+                                                                        <color key="value" name="TF Placeholder"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -380,14 +380,13 @@ Development In Progress</string>
                                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Erb-lC-BSq" secondAttribute="trailing" constant="50" id="5zy-IL-4RT"/>
                                                             <constraint firstItem="5bq-AS-lV1" firstAttribute="leading" secondItem="kGH-Dt-s5d" secondAttribute="leading" id="NlD-EZ-qU4"/>
                                                             <constraint firstAttribute="trailing" secondItem="5bq-AS-lV1" secondAttribute="trailing" id="Y0o-x1-Fib"/>
-                                                            <constraint firstAttribute="bottom" secondItem="5bq-AS-lV1" secondAttribute="bottom" id="bic-O6-XW7"/>
                                                             <constraint firstItem="Erb-lC-BSq" firstAttribute="leading" secondItem="kGH-Dt-s5d" secondAttribute="leading" id="f11-lQ-wqh"/>
                                                             <constraint firstItem="5bq-AS-lV1" firstAttribute="top" secondItem="Erb-lC-BSq" secondAttribute="bottom" constant="5" id="pLW-Lc-315"/>
                                                             <constraint firstItem="Erb-lC-BSq" firstAttribute="top" secondItem="kGH-Dt-s5d" secondAttribute="top" constant="5" id="vFN-kJ-ARD"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rt2-PN-54d">
-                                                        <rect key="frame" x="0.0" y="91.5" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="100.5" width="335" height="90.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22B-0O-kaS">
                                                                 <rect key="frame" x="0.0" y="5" width="285" height="14.5"/>
@@ -395,7 +394,7 @@ Development In Progress</string>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   13:23" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNb-RF-g74">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="13:23" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNb-RF-g74">
                                                                 <rect key="frame" x="0.0" y="24.5" width="335" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="NMi-em-0xV"/>
@@ -414,7 +413,7 @@ Development In Progress</string>
                                                                         <color key="value" name="AccentColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                                        <color key="value" systemColor="systemGray6Color"/>
+                                                                        <color key="value" name="TF Placeholder"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -430,7 +429,7 @@ Development In Progress</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hco-es-NkO">
-                                                        <rect key="frame" x="0.0" y="183" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="201" width="335" height="90.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH4-kd-eUn">
                                                                 <rect key="frame" x="0.0" y="5" width="285" height="30.5"/>
@@ -438,7 +437,7 @@ Development In Progress</string>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   17:45" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxz-ml-jpz">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="17:45" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxz-ml-jpz">
                                                                 <rect key="frame" x="0.0" y="40.5" width="335" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="O71-cx-SaI"/>
@@ -457,7 +456,7 @@ Development In Progress</string>
                                                                         <color key="value" name="AccentColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                                        <color key="value" systemColor="systemGray6Color"/>
+                                                                        <color key="value" name="TF Placeholder"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -474,15 +473,15 @@ Development In Progress</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGZ-gJ-kav">
-                                                        <rect key="frame" x="0.0" y="274.5" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="301.5" width="335" height="90.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours (Lunch Hours Included)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wih-mo-NHv">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time for Session (In Minutes)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wih-mo-NHv">
                                                                 <rect key="frame" x="0.0" y="5" width="285" height="30.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   04" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dvi-9Z-cee">
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="70 Minutes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dvi-9Z-cee">
                                                                 <rect key="frame" x="0.0" y="40.5" width="335" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="S4j-Xr-JDU"/>
@@ -501,7 +500,7 @@ Development In Progress</string>
                                                                         <color key="value" name="AccentColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                                        <color key="value" systemColor="systemGray6Color"/>
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -518,7 +517,7 @@ Development In Progress</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfF-RX-ESu">
-                                                        <rect key="frame" x="0.0" y="366" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="402" width="335" height="90.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re2-YB-FMX">
                                                                 <rect key="frame" x="0.0" y="5" width="285" height="30.5"/>
@@ -526,7 +525,7 @@ Development In Progress</string>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Computer " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G2l-pr-m3x">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Computer " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G2l-pr-m3x">
                                                                 <rect key="frame" x="0.0" y="40.5" width="335" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="mFJ-X9-RBb"/>
@@ -545,7 +544,7 @@ Development In Progress</string>
                                                                         <color key="value" name="AccentColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                                        <color key="value" systemColor="systemGray6Color"/>
+                                                                        <color key="value" name="TF Placeholder"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -562,7 +561,7 @@ Development In Progress</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Slc-P5-faf">
-                                                        <rect key="frame" x="0.0" y="457.5" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="502.5" width="335" height="90.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJx-78-mm4">
                                                                 <rect key="frame" x="0.0" y="5" width="285" height="14.5"/>
@@ -570,7 +569,7 @@ Development In Progress</string>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   iOS Mobile App Dev" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K1c-n6-zEd">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Operating Systems" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K1c-n6-zEd">
                                                                 <rect key="frame" x="0.0" y="24.5" width="335" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="rOu-1k-6J6"/>
@@ -589,7 +588,7 @@ Development In Progress</string>
                                                                         <color key="value" name="AccentColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                                        <color key="value" systemColor="systemGray6Color"/>
+                                                                        <color key="value" name="TF Placeholder"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -605,52 +604,59 @@ Development In Progress</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCF-O0-oOi">
-                                                        <rect key="frame" x="0.0" y="549" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="603" width="335" height="90.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description (Optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uz-41-Pko">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes (Optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uz-41-Pko">
                                                                 <rect key="frame" x="0.0" y="10" width="285" height="14.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write Notes Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Umb-f4-Krx">
-                                                                <rect key="frame" x="0.0" y="29.5" width="335" height="61"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Additional notes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGg-cC-jgr">
+                                                                <rect key="frame" x="0.0" y="29.5" width="335" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="yBM-I2-an3"/>
+                                                                </constraints>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" name="AccentColor"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                         <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" name="AccentColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                        <color key="value" name="TF Placeholder"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                            </textView>
+                                                            </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="4uz-41-Pko" firstAttribute="top" secondItem="KCF-O0-oOi" secondAttribute="top" constant="10" id="5hX-eA-RAI"/>
-                                                            <constraint firstItem="Umb-f4-Krx" firstAttribute="leading" secondItem="KCF-O0-oOi" secondAttribute="leading" id="HoO-zN-W4A"/>
                                                             <constraint firstItem="4uz-41-Pko" firstAttribute="leading" secondItem="KCF-O0-oOi" secondAttribute="leading" id="Msw-cr-jQ4"/>
                                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4uz-41-Pko" secondAttribute="trailing" constant="50" id="NEi-9f-5UB"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Umb-f4-Krx" secondAttribute="bottom" id="OyW-Fb-dls"/>
-                                                            <constraint firstItem="Umb-f4-Krx" firstAttribute="top" secondItem="4uz-41-Pko" secondAttribute="bottom" constant="5" id="TEj-Fh-z17"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Umb-f4-Krx" secondAttribute="trailing" id="soC-Mb-flV"/>
+                                                            <constraint firstAttribute="trailing" secondItem="aGg-cC-jgr" secondAttribute="trailing" id="TAg-Qz-5bL"/>
+                                                            <constraint firstItem="aGg-cC-jgr" firstAttribute="top" secondItem="4uz-41-Pko" secondAttribute="bottom" constant="5" id="o7Y-0h-gcv"/>
+                                                            <constraint firstItem="aGg-cC-jgr" firstAttribute="leading" secondItem="KCF-O0-oOi" secondAttribute="leading" id="ySP-lo-u4n"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrG-l4-eEo">
-                                                        <rect key="frame" x="0.0" y="640.5" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="703.5" width="335" height="90.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egn-Dk-Vfu">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egn-Dk-Vfu">
                                                                 <rect key="frame" x="20" y="20" width="295" height="50.5"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system" title="  Book Session Online?"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="  Book Session Online?"/>
+                                                                <connections>
+                                                                    <action selector="bookSessionOnlinePressed:" destination="7Yu-WP-mbE" eventType="touchUpInside" id="G2E-W3-AQg"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -662,7 +668,7 @@ Development In Progress</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dU-ln-ygb">
-                                                        <rect key="frame" x="0.0" y="732" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="804" width="335" height="90.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wch-fC-flh">
                                                                 <rect key="frame" x="20" y="23" width="295" height="45"/>
@@ -686,6 +692,9 @@ Development In Progress</string>
                                                                         <real key="value" value="22"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="BookSessionPressed:" destination="7Yu-WP-mbE" eventType="touchUpInside" id="AX7-Bl-r7e"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -696,32 +705,36 @@ Development In Progress</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmF-aG-iwA">
-                                                        <rect key="frame" x="0.0" y="823.5" width="335" height="90.5"/>
+                                                        <rect key="frame" x="0.0" y="904.5" width="335" height="90.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-cg-kLs" customClass="BackButton" customModule="Project" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="10" width="35" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-cg-kLs">
+                                                <rect key="frame" x="10" y="7.5" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="Fi1-Kx-7Qd"/>
                                                     <constraint firstAttribute="height" constant="35" id="mnO-gl-inY"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.left.circle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="7Yu-WP-mbE" eventType="touchUpInside" id="DDx-2o-zUU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="1NJ-3s-CKU" secondAttribute="bottom" constant="20" id="10G-cv-mPV"/>
                                             <constraint firstItem="1NJ-3s-CKU" firstAttribute="top" secondItem="jYV-gs-KGY" secondAttribute="bottom" constant="20" id="CaK-Ao-3tf"/>
+                                            <constraint firstItem="Lhy-cg-kLs" firstAttribute="centerY" secondItem="jYV-gs-KGY" secondAttribute="centerY" id="Ec1-Zu-iDC"/>
                                             <constraint firstAttribute="trailing" secondItem="jYV-gs-KGY" secondAttribute="trailing" id="IHo-Bn-XKP"/>
                                             <constraint firstItem="jYV-gs-KGY" firstAttribute="top" secondItem="dWG-pB-GMj" secondAttribute="top" id="QuS-SQ-XT7"/>
                                             <constraint firstItem="1NJ-3s-CKU" firstAttribute="leading" secondItem="dWG-pB-GMj" secondAttribute="leading" constant="20" id="Wdn-EZ-UxS"/>
                                             <constraint firstItem="Lhy-cg-kLs" firstAttribute="leading" secondItem="dWG-pB-GMj" secondAttribute="leading" constant="10" id="j31-12-4z9"/>
                                             <constraint firstItem="jYV-gs-KGY" firstAttribute="leading" secondItem="dWG-pB-GMj" secondAttribute="leading" id="p3M-wy-Q2R"/>
                                             <constraint firstAttribute="trailing" secondItem="1NJ-3s-CKU" secondAttribute="trailing" constant="20" id="ybJ-hV-8Xr"/>
-                                            <constraint firstItem="Lhy-cg-kLs" firstAttribute="top" secondItem="dWG-pB-GMj" secondAttribute="top" constant="10" id="ydw-4q-azx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -745,6 +758,16 @@ Development In Progress</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Booking" image="plus.square.on.square" catalog="system" selectedImage="plus.square.on.square.fill" id="4Ty-z9-ot0"/>
                     <size key="freeformSize" width="375" height="1155"/>
+                    <connections>
+                        <outlet property="bookSessionOnline" destination="egn-Dk-Vfu" id="5MK-6L-Nb9"/>
+                        <outlet property="courseTF" destination="G2l-pr-m3x" id="vrm-rg-y1n"/>
+                        <outlet property="dateTF" destination="5bq-AS-lV1" id="mmV-tF-7T4"/>
+                        <outlet property="notesTF" destination="aGg-cC-jgr" id="Ib9-cq-j8R"/>
+                        <outlet property="timeForSessionTF" destination="Dvi-9Z-cee" id="anu-t4-A0j"/>
+                        <outlet property="timeINTF" destination="HNb-RF-g74" id="2Eq-Rv-RTH"/>
+                        <outlet property="timeOUTTF" destination="zxz-ml-jpz" id="NQM-jP-xN2"/>
+                        <outlet property="topicTF" destination="K1c-n6-zEd" id="0Wg-Z9-0re"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xI-JE-9ng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -776,12 +799,12 @@ Development In Progress</string>
     </scenes>
     <designables>
         <designable name="Lhy-cg-kLs">
-            <size key="intrinsicContentSize" width="24" height="14"/>
+            <size key="intrinsicContentSize" width="26" height="26"/>
         </designable>
     </designables>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="123"/>
-        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="chevron.left.circle" catalog="system" width="128" height="123"/>
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="line.horizontal.3.circle" catalog="system" width="128" height="123"/>
@@ -797,10 +820,10 @@ Development In Progress</string>
         <namedColor name="BgColor">
             <color red="0.47299998998641968" green="0.50300002098083496" blue="0.49900001287460327" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="scrollViewTexturedBackgroundColor">
-            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
+        <namedColor name="TF Placeholder">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">

@@ -63,6 +63,15 @@ class APIRequestUtil {
         print(urlString)
         sendRequest(urlString: urlString, parameters: parameters, method: .post, completion: completion)
     }
+
+    
+    
+    func bookSession(parameters: Parameters, completion: @escaping RequestCompletion) {
+        let urlString = APIPaths.bookSession
+        print(urlString)
+        sendRequest(withToken: true, urlString: urlString, parameters: parameters, method: .post, completion: completion)
+    }
+    
     
 }
 
